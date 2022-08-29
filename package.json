@@ -1,10 +1,10 @@
 {
-  "name": "react-lightbox-gallery",
+  "name": "bekzod-lightbox-gallery",
   "version": "2.0.0",
   "description": "A lightbox plugin for react",
-  "author": "alvinzach",
+  "author": "Bekzod Raxmonov",
   "license": "MIT",
-  "repository": "alvinzach/react-lightbox-gallery",
+  "repository": "rakhmonovbekzod/custom-lightbox",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

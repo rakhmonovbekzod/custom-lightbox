@@ -218,9 +218,7 @@ export default class LightRoomComponent extends Component {
              />
            </div>
            <div className={styles.lightroomdesc}>
-             <h1>{this.state.name}</h1>
-             <p className={styles.desc}>{this.state.desc}</p>
-             <p className={styles.sub}>{this.state.sub}</p>
+               {this.props.children}
            </div>
            <img
              src={
