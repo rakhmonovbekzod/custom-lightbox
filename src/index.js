@@ -163,7 +163,15 @@ export default class LightRoomComponent extends Component {
      const runtimeStyles = this.calculateStyles();
 
      return (
-       <div>
+       <div className='my_lightbox'>
+        <div className='my_lightbox_top'>
+             <button className='my_lightbox_back_btn'>
+             </button>
+             <div>
+                  <h3>{title}</h3>
+                  <span>{date}</span>
+             </div>
+        </div>
          <div className={styles.row} style={runtimeStyles.row}>
            {this.props.images.map((img, i) => (
              <div className={styles.column} key={i}>
