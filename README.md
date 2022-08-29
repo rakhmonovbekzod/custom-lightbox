@@ -23,7 +23,7 @@ Find demo in [codesandbox](https://codesandbox.io/s/laughing-wu-n2b3t)
 ## Install
 
 ```bash
-npm install --save react-lightbox-gallery
+npm install --save bekzod-lightbox-gallery
 ```
 
 
@@ -32,7 +32,7 @@ npm install --save react-lightbox-gallery
 ```jsx
 import React, { Component } from 'react'
 
-import Lightroom from 'react-lightbox-gallery'
+import Lightroom from 'bekzod-lightbox-gallery'
 
 export default class App extends Component {
   render() {
@@ -70,4 +70,4 @@ export default class App extends Component {
 
 ## License
 
-MIT © [alvinzach](https://github.com/alvinzach)
+MIT © [rakhmonovbekzod](https://github.com/rakhmonovbekzod)
