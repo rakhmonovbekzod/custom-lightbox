@@ -166,17 +166,9 @@ export default class LightRoomComponent extends Component {
 
    render() {
      const runtimeStyles = this.calculateStyles();
-
+   const {myheader }  = this.props.header 
      return (
        <div className='my_lightbox'>
-        <div className={`my_lightbox_top ${this.state.addclass ? 'active' : ''}`}>
-             <button className='my_lightbox_back_btn'>
-             </button>
-             <div>
-                  <h3>{this.state.info ? this.state.info.title : '' }</h3>
-                  <span>{this.state.info ? this.state.info.date : ''}</span>
-             </div>
-        </div>
          <div className={styles.row} style={runtimeStyles.row}>
            {this.props.images.map((img, i) => (
              <div className={styles.column} key={i}>
@@ -198,6 +190,9 @@ export default class LightRoomComponent extends Component {
              ...runtimeStyles.lightroom
            }}
          >
+          <div className={`my_lightbox_top ${this.state.addclass ? 'active' : ''}`}>
+             {this.props.header ? <myheader/> : '' }
+           </div>
            <div className={styles.topmenu}>
              <img
                src={
