@@ -21,7 +21,8 @@ export default class LightRoomComponent extends Component {
      desc: "",
      sub: "",
      touchStart: 0,
-     touchEnd: 0
+     touchEnd: 0,
+     addclass:false
    };
    // varibles to store props
    size = 4;
@@ -34,7 +35,8 @@ export default class LightRoomComponent extends Component {
    // controlling lightbox activation
    openlightroom = e => {
      this.setState({
-       lightroomactive: true
+       lightroomactive: true,
+       addclass:true
      });
      this.getcontent(e.target.getAttribute("data-index"));
    };
@@ -42,7 +44,8 @@ export default class LightRoomComponent extends Component {
    closelightroom = () => {
      this.setState({
        lightroomactive: false,
-       thumbmenuactive: false
+       thumbmenuactive: false,
+       addclass:false
      });
    };
 
@@ -165,7 +168,7 @@ export default class LightRoomComponent extends Component {
 
      return (
        <div className='my_lightbox'>
-        <div className='my_lightbox_top'>
+        <div className={`my_lightbox_top ${this.state.addclass ? 'active' : ''}`}>
              <button className='my_lightbox_back_btn'>
              </button>
              <div>
@@ -226,7 +229,7 @@ export default class LightRoomComponent extends Component {
                style={{ maxWidth: "100%" }}
              />
            </div>
-           <div className={styles.lightroomdesc}>
+           <div className={`${styles.lightroomdesc} ${this.state.addclass ? 'active' : ''}`}>
                {this.props.children}
            </div>
            <img
