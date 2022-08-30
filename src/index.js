@@ -166,7 +166,7 @@ export default class LightRoomComponent extends Component {
 
    render() {
      const runtimeStyles = this.calculateStyles();
-   const {myheader }  = this.props.header 
+   const { myheader }  = this.props.header 
      return (
        <div className='my_lightbox'>
          <div className={styles.row} style={runtimeStyles.row}>
@@ -191,7 +191,7 @@ export default class LightRoomComponent extends Component {
            }}
          >
           <div className={`my_lightbox_top ${this.state.addclass ? 'active' : ''}`}>
-             {this.props.header ? <myheader/> : '' }
+             {this.props.myheader ? <myheader/> : '' }
            </div>
            <div className={styles.topmenu}>
              <img
