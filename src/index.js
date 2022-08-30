@@ -80,6 +80,7 @@ export default class LightRoomComponent extends Component {
        desc: this.props.images[id].desc,
        info: {...this.props.images[id]}
      });
+     this.props.getcontent({...this.props.images[id]})
    };
 
    // toggle thumb menu
