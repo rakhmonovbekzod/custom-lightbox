@@ -22,7 +22,7 @@ export default class LightRoomComponent extends Component {
      sub: "",
      touchStart: 0,
      touchEnd: 0,
-     addclass:false
+     addclass:false,
    };
    // varibles to store props
    size = 4;
@@ -173,8 +173,8 @@ export default class LightRoomComponent extends Component {
              <button className='my_lightbox_back_btn'>
              </button>
              <div>
-                  <h3>{this.props.title}</h3>
-                  <span>{this.props.date}</span>
+                  <h3>{this.state.info ? this.state.info.title : '' }</h3>
+                  <span>{this.state.info ? this.state.info.date : ''}</span>
              </div>
         </div>
          <div className={styles.row} style={runtimeStyles.row}>
