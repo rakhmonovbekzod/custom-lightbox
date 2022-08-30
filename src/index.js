@@ -191,7 +191,7 @@ export default class LightRoomComponent extends Component {
            }}
          >
           <div className={`my_lightbox_top ${this.state.addclass ? 'active' : ''}`}>
-             {myheader ? <myheader/> : '' }
+             {myheader ? myheader : '' }
            </div>
            <div className={styles.topmenu}>
              <img
