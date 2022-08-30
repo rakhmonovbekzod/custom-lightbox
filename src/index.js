@@ -52,10 +52,22 @@ export default class LightRoomComponent extends Component {
    //lightbox controls
 
    moveright = () => {
-    this.props.show_nextImage()
+     var id = parseInt(this.state.activeindex, 10);
+     if (id == this.state.length - 1)
+       this.setState({
+         lightroomactive: false,
+         thumbmenuactive: false
+       });
+     else this.getcontent(++id);
    };
    moveleft = () => {
-     this.props.show_prevImage()
+     var id = parseInt(this.state.activeindex, 10);
+     if (id == 0)
+       this.setState({
+         lightroomactive: false,
+         thumbmenuactive: false
+       });
+     else this.getcontent(--id);
    };
 
    // get image at current active index
