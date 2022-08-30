@@ -47,7 +47,6 @@ export default class LightRoomComponent extends Component {
        thumbmenuactive: false,
        addclass:false
      });
-     this.props.closelightroom()
    };
 
    //lightbox controls
@@ -191,7 +190,11 @@ export default class LightRoomComponent extends Component {
              ...runtimeStyles.lightroom
            }}
          >
-          <div className={`my_lightbox_top ${this.state.addclass ? 'active' : ''}`}>
+          <div onClick={(e) => {
+              if (e.target.matches('.acteamparams__titling-arrow') || e.target.matches('.acteamparams__titling-img')) {
+                this.closelightroom()
+              }
+          }} className={`my_lightbox_top ${this.state.addclass ? 'active' : ''}`}>
              {myheader ? myheader : '' }
            </div>
            <div className={styles.topmenu}>
