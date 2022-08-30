@@ -47,6 +47,7 @@ export default class LightRoomComponent extends Component {
        thumbmenuactive: false,
        addclass:false
      });
+     this.props.closelightroom()
    };
 
    //lightbox controls
