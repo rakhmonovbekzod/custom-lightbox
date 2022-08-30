@@ -74,7 +74,8 @@ export default class LightRoomComponent extends Component {
        activeindex: id,
        path: this.props.images[id].src,
        sub: this.props.images[id].sub,
-       desc: this.props.images[id].desc
+       desc: this.props.images[id].desc,
+       info: {...this.props.images[id]}
      });
    };
 
